@@ -1,0 +1,79 @@
+/* Estilos generales para todos los elementos */
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Establece que el tamaño total de los elementos incluye el borde y el relleno */
+}
+
+/* Estilos para el body */
+body {
+    background-color: black; /* Establece el fondo de la página a negro */
+    color: yellow; /* Establece el color del texto a amarillo */
+    font-family: 'Arial', sans-serif; /* Establece la fuente principal a Arial o una fuente sans-serif */
+    height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */
+    display: flex; /* Usa Flexbox para organizar los elementos dentro del body */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga del body */
+    perspective: 500px; /* Aplica perspectiva 3D a los elementos hijos */
+}
+
+/* Contenedor principal para las credenciales (créditos) */
+.credits-wrapper {
+    position: relative; /* Establece la posición relativa para poder posicionar los elementos dentro */
+    height: 80vh; /* Ajusta la altura para que no ocupe toda la ventana */
+    width: 80%; /* El ancho es el 80% del ancho de la pantalla */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+}
+
+/* Estilos para la sección de créditos */
+.credits {
+    position: absolute; /* Posiciona los créditos de forma absoluta dentro del contenedor */
+    bottom: -100%; /* Inicialmente coloca los créditos fuera de la pantalla, abajo */
+    animation: scrollUp 20s linear infinite; /* Aplica una animación para hacer que los créditos se desplacen hacia arriba */
+    text-align: center; /* Centra el texto de los créditos */
+    font-size: 24px; /* Establece el tamaño de la fuente a 24px */
+    line-height: 1.5; /* Establece el espacio entre las líneas de texto */
+    transform-origin: bottom; /* Establece el punto de origen de la transformación en la parte inferior */
+    transform: rotateX(20deg); /* Aplica un giro en el eje X para crear una perspectiva 3D */
+    width: 100%; /* Hace que el contenedor de los créditos ocupe todo el ancho disponible */
+}
+
+/* Estilos para el encabezado de los créditos */
+.credits h1 {
+    font-size: 48px; /* Establece un tamaño de fuente grande para el título */
+    margin-bottom: 20px; /* Añade un margen inferior de 20px */
+}
+
+/* Estilos para los párrafos dentro de los créditos */
+.credits p {
+    font-size: 24px; /* Establece el tamaño de la fuente a 24px */
+    margin-bottom: 10px; /* Añade un margen inferior de 10px */
+}
+
+/* Animación para hacer que los créditos suban desde abajo */
+@keyframes scrollUp {
+    0% {
+        bottom: -100%; /* Al inicio, los créditos están fuera de la pantalla, abajo */
+    }
+    100% {
+        bottom: 100%; /* Al final de la animación, los créditos habrán subido fuera de la pantalla, arriba */
+    }
+}
+
+/* Estilos para el botón de retroceso */
+.back-button {
+    position: fixed; /* Posiciona el botón de retroceso de forma fija en la pantalla */
+    top: 20px; /* Coloca el botón a 20px desde la parte superior de la pantalla */
+    left: 165px; /* Mueve el botón más hacia la derecha, ajustando su posición */
+    padding: 10px 20px; /* Aplica relleno de 10px vertical y 20px horizontal */
+    font-size: 1em; /* Establece un tamaño de fuente normal para el botón */
+    background: #e2ef32; /* Establece el color de fondo del botón a un tono amarillo */
+    color: #000000; /* Establece el color del texto del botón a negro */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa por encima del botón */
+    font-weight: bold; /* Establece el texto del botón en negrita */
+    transition: 0.3s; /* Aplica una transición suave al cambiar de estado (como el hover) */
+    z-index: 1000; /* Asegura que el botón se muestre encima de otros elementos en la página */
+}
