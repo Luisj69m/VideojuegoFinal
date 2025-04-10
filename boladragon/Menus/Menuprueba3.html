@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Establece la codificación de caracteres de la página a UTF-8 para soportar caracteres especiales -->
+    <meta charset="UTF-8">
+    
+    <!-- Enlaza el archivo de estilos CSS para la página de menú -->
+    <link rel="stylesheet" href="/boladragon/CSS/EstiloMenu3.css">
+    
+    <!-- Enlaza el archivo JavaScript para manejar la lógica de opciones del menú. Se utiliza "defer" para asegurarse de que el script se cargue después de que el HTML esté completamente cargado -->
+    <script src="/boladragon/SCRIPT/opciones.js" defer></script>
+    
+    <!-- Enlaza el archivo JavaScript que maneja el menú -->
+    <script src="/boladragon/SCRIPT/menu.js"></script>
+    
+    <!-- Título de la página, que se muestra en la pestaña del navegador -->
+    <title>Menú del Videojuego</title>
+</head>
+<body>
+    <!-- Reproductor de audio en bucle que se carga automáticamente al abrir la página -->
+    <audio id="musica" src="/boladragon/audio/GTA4.mp3" autoplay loop></audio>
+    
+    <!-- Contenedor principal del menú -->
+    <div class="menu-container">
+        <!-- Lista desordenada que contiene los elementos del menú -->
+        <ul class="menu">
+            <!-- Enlaces de navegación a las diferentes páginas del juego -->
+            <li><a href="/boladragon/Menus/MenuEleccionpersonaje.html">Jugar</a></li>
+            <li><a href="/boladragon/Tienda/Tiendaprueba.html">Tienda</a></li>
+            <li><a href="/boladragon/opciones/opciones.html">Opciones</a></li>
+            <li><a href="/boladragon/creditos/creditos.html">Créditos</a></li>
+            <li><a href="/boladragon/EasterEgg/ExtraDLC.html">Extra DLC</a></li>
+        </ul>
+    </div>
+
+    <!-- Pie de página que muestra los derechos de autor -->
+    <div class="footer">
+        © 2025 UNIVERSALSTUDIOBALLS.
+    </div>
+
+    <!-- Otro pie de página que muestra el texto "Early Access" -->
+    <div class="footer1">
+        Early Access
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* ------------------------------- */
+/* Estilos /* Estilos para el body y html */
+body, html {
+    height: 100%; /* Establece la altura del body y html al 100% para que ocupe toda la ventana */
+    margin: 0; /* Elimina el margen predeterminado del body */
+}
+
+/* Estilos específicos para el body */
+body {
+    background: url('/boladragon/Escenarios/escenario_lobby.jpg'); /* Establece una imagen de fondo para el body */
+    background-color: black; /* En caso de que la imagen no cargue, el fondo será negro */
+    background-size: contain; /* La imagen de fondo se ajustará para contenerse dentro del contenedor sin deformarse */
+    background-position: center; /* Centra la imagen de fondo dentro del contenedor */
+    background-attachment: fixed; /* Fija la imagen de fondo, para que no se mueva cuando se hace scroll */
+    display: flex; /* Usa Flexbox para alinear los elementos dentro del body */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el texto dentro del body */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+}
+
+/* Estilos para el contenedor del menú */
+.menu-container {
+    font-family: Impact; /* Establece la fuente 'Impact' para el menú */
+    text-align: center; /* Centra el texto dentro del contenedor del menú */
+    border-radius: 15px; /* Redondea las esquinas del contenedor del menú */
+    display: flex; /* Usa Flexbox para organizar los elementos dentro del contenedor */
+}
+
+/* Estilos para la lista del menú */
+.menu {
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+/* Estilos para los elementos de la lista del menú */
+.menu li {
+    margin: 20px; /* Añade espacio entre los elementos del menú */
+}
+
+/* Estilos para los enlaces dentro del menú */
+.menu a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #ffffff; /* Establece el color de texto de los enlaces a blanco */
+    font-size: 24px; /* Establece el tamaño de la fuente a 24px */
+    padding: 10px 20px; /* Añade relleno alrededor del texto */
+    border-radius: 10px; /* Redondea las esquinas de los enlaces */
+    transition: 0.2s; /* Aplica una transición suave al hacer hover */
+}
+
+/* Estilos para el efecto hover de los enlaces del menú */
+.menu a:hover {
+    background-color: #fb0303; /* Cambia el color de fondo a rojo cuando se pasa el cursor por encima */
+    color: #ffc800; /* Cambia el color del texto a amarillo cuando se pasa el cursor por encima */
+}
+
+/* Estilos para el pie de página a la derecha */
+.footer {
+    position: absolute; /* Posiciona el pie de página de forma absoluta en la pantalla */
+    bottom: 10px; /* Coloca el pie de página a 10px desde la parte inferior */
+    right: 10px; /* Coloca el pie de página a 10px desde la parte derecha */
+    font-size: 14px; /* Establece el tamaño de la fuente a 14px */
+    color: white; /* Establece el color del texto del pie de página a blanco */
+}
+
+/* Estilos para el pie de página a la izquierda */
+.footer1 {
+    position: absolute; /* Posiciona el pie de página de forma absoluta en la pantalla */
+    bottom: 10px; /* Coloca el pie de página a 10px desde la parte inferior */
+    left: 10px; /* Coloca el pie de página a 10px desde la parte izquierda */
+    font-size: 14px; /* Establece el tamaño de la fuente a 14px */
+    color: white; /* Establece el color del texto del pie de página a blanco */
+}

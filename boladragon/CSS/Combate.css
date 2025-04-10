@@ -1,0 +1,153 @@
+/* Estilos globales del body */
+body {
+  margin: 0; /* Elimina los márgenes predeterminados del body */
+  padding: 0; /* Elimina los rellenos predeterminados del body */
+  background: linear-gradient(to top, #444 40%, #99ccff 100%); /* Aplica un fondo con gradiente de gris oscuro a azul claro */
+  font-family: Arial, sans-serif; /* Establece la fuente Arial o una fuente sans-serif */
+  color: white; /* El texto tendrá color blanco */
+  display: flex; /* Usa Flexbox para organizar el layout */
+  flex-direction: column; /* Los elementos dentro de body se ordenan en columna */
+  align-items: center; /* Los elementos se alinean al centro en el eje horizontal */
+  justify-content: flex-start; /* Los elementos se alinean al principio (arriba) en el eje vertical */
+  min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+  overflow-x: hidden; /* Oculta cualquier contenido desbordado horizontalmente */
+}
+
+/* Contenedor de la batalla */
+.battle-container {
+  width: 90%; /* El contenedor ocupa el 90% del ancho de la pantalla */
+  max-width: 1000px; /* Establece un ancho máximo de 1000px */
+  height: 60vh; /* La altura es el 60% de la altura de la ventana */
+  position: relative; /* Permite posicionar los elementos internos en relación al contenedor */
+  margin-top: 40px; /* Aplica un margen superior de 40px */
+  background-image: url("/boladragon/Escenarios/escenario_MushoBetis.png"); /* Establece una imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  border-radius: 20px; /* Redondea las esquinas del contenedor */
+  box-shadow: 0 0 15px rgba(0,0,0,0.7); /* Aplica una sombra de caja para darle un efecto elevado */
+}
+
+/* Estilos para el área del enemigo */
+.enemy-area {
+  position: absolute; /* Permite posicionar el área del enemigo de forma absoluta dentro del contenedor */
+  top: 0; /* Coloca el área en la parte superior */
+  right: 0; /* Lo alinea a la derecha */
+  text-align: right; /* Alinea el texto a la derecha */
+}
+
+/* Estilos para el sprite del enemigo (volteado horizontalmente) */
+.sprite-back {
+  width: 180px; /* Establece el ancho de la imagen del enemigo */
+  transform: scaleX(-1); /* Voltea la imagen horizontalmente (para que mire hacia el jugador) */
+}
+
+/* Estilos para el área del jugador */
+.player-area {
+  position: absolute; /* Posiciona el área del jugador de forma absoluta dentro del contenedor */
+  bottom: 0; /* Lo coloca en la parte inferior */
+  left: 0; /* Lo alinea a la izquierda */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilos para el sprite del jugador */
+.sprite-front {
+  width: 250px; /* Establece el ancho de la imagen del jugador */
+}
+
+/* Estilos para las cajas de información (por ejemplo, barra de vida) */
+.info-box {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente negro */
+  padding: 10px 15px; /* Relleno interno de la caja */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 10px; /* Espaciado externo de la caja */
+  width: 200px; /* Establece un ancho fijo de 200px */
+}
+
+/* Estilos para las barras de vida */
+.health-bar-container {
+  background-color: #333; /* Fondo oscuro para la barra de vida */
+  width: 100%; /* La barra de vida ocupa todo el ancho disponible */
+  height: 20px; /* Establece la altura de la barra de vida */
+  border-radius: 5px; /* Bordes redondeados para la barra */
+  margin: 5px 0; /* Margen vertical de 5px */
+  overflow: hidden; /* Asegura que el contenido no se desborde fuera de la barra */
+}
+
+/* Estilos para la barra de vida (parte llena) */
+.health-bar {
+  height: 100%; /* La altura de la barra llena es el 100% de la barra de vida */
+  background-color: #00cc00; /* Color verde para la barra de vida llena */
+  width: 100%; /* Inicialmente la barra de vida se llena completamente */
+  transition: width 0.3s, background-color 0.3s; /* Transiciones suaves cuando cambia el tamaño o el color */
+}
+
+/* Estilos para los controles de acción (botones) */
+.controls {
+  margin-top: 20px; /* Aplica un margen superior para separar los controles */
+  text-align: center; /* Alinea los controles al centro */
+}
+
+/* Estilos generales para los botones */
+button {
+  margin: 10px; /* Aplica un margen externo de 10px entre los botones */
+  padding: 15px; /* Establece un relleno interno de 15px */
+  font-size: 16px; /* Establece el tamaño de la fuente de los botones */
+  border: none; /* Elimina el borde predeterminado del botón */
+  border-radius: 8px; /* Redondea las esquinas del botón */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+  color: white; /* Establece el color del texto en blanco */
+  transition: 0.3s; /* Aplica una transición suave en la interacción */
+}
+
+/* Estilos específicos para los botones */
+#attack { background-color: #d50000; } /* Rojo para el botón de ataque */
+#evade { background-color: #012041; } /* Azul oscuro para el botón de evadir */
+#heal { background-color: #009e00; } /* Verde para el botón de curación */
+#habilidadEspecial { background-color: #bb29b4; } /* Morado para el botón de habilidad especial */
+
+/* Estilos para los botones deshabilitados */
+button:disabled {
+  opacity: 0.5; /* Reduce la opacidad cuando el botón está deshabilitado */
+  cursor: not-allowed; /* Cambia el cursor para indicar que el botón no es clickeable */
+}
+
+/* Estilos para el área de logs de acción */
+.log {
+  margin-top: 20px; /* Aplica un margen superior para separar los logs */
+  width: 90%; /* El log ocupa el 90% del ancho de la pantalla */
+  max-width: 800px; /* Establece un ancho máximo de 800px */
+  height: 150px; /* Establece la altura del área de logs */
+  overflow-y: auto; /* Permite el desplazamiento vertical si hay más contenido */
+  background: #222; /* Fondo oscuro para los logs */
+  padding: 10px; /* Relleno interno de 10px */
+  border-radius: 5px; /* Bordes redondeados para el área de logs */
+}
+
+/* Pantalla de victoria */
+.winner-screen {
+  display: none; /* Inicialmente está oculta */
+  position: fixed; /* Fija la posición en la pantalla */
+  top: 0; /* Se coloca en la parte superior */
+  left: 0; /* Se coloca a la izquierda */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con opacidad para resaltar el mensaje */
+  color: white; /* El texto será blanco */
+  font-size: 3em; /* Tamaño de fuente grande para el mensaje */
+  text-align: center; /* Alinea el texto al centro */
+  flex-direction: column; /* Dispone los elementos en columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  z-index: 999; /* Asegura que se muestre encima de otros elementos */
+}
+
+/* Estilos para el botón en la pantalla de victoria */
+.winner-screen button {
+  margin-top: 20px; /* Aplica un margen superior para separar el botón */
+  padding: 15px 30px; /* Establece el tamaño del botón */
+  font-size: 1.5em; /* Tamaño de fuente mayor para el botón */
+  background-color: #ffae00; /* Color de fondo amarillo para el botón */
+  color: black; /* Color de texto negro para el botón */
+  border-radius: 10px; /* Bordes redondeados para el botón */
+  cursor: pointer; /* Cambia el cursor a mano para indicar que es clickeable */
+}

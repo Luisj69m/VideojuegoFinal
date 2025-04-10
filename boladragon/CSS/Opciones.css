@@ -1,0 +1,53 @@
+/* Estilos generales del body */
+body { 
+    font-family: Arial, sans-serif; /* Fuente predeterminada para todo el texto */
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #fff; /* Texto en color blanco */
+    text-align: center; /* Alineación centrada del contenido */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+}
+
+/* Contenedor del menú principal */
+.menu { 
+    max-width: 400px; /* Ancho máximo del menú */
+    margin: 50px auto; /* Centrado vertical y horizontal con margen superior */
+    padding: 20px; /* Espaciado interno */
+    background: #333; /* Fondo gris oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); /* Sombra suave blanca */
+}
+
+/* Estilos comunes para etiquetas, selectores e inputs */
+label, select, input { 
+    display: block; /* Muestra cada uno en una nueva línea */
+    margin: 10px auto; /* Margen vertical y centrado horizontalmente */
+    width: 80%; /* Ancho relativo al contenedor */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para los selectores y campos de entrada */
+select, input {
+    padding: 8px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin borde por defecto */
+    background: #444; /* Fondo gris más claro que el contenedor */
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilos del botón */
+button {
+    background: #ff6600; /* Naranja fuerte */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: 15px; /* Espacio superior */
+    font-size: 16px; /* Tamaño de letra */
+}
+
+/* Efecto hover del botón */
+button:hover {
+    background: #ff4500; /* Naranja más oscuro al pasar el mouse */
+}

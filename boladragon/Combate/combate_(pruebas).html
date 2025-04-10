@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Documento HTML5 -->
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Combate de mierda</title>
+
+  <!-- Estilos y scripts -->
+  <link rel="stylesheet" href="/boladragon/CSS/Combate.css" />
+  <script src="/boladragon/SCRIPT/opciones.js" defer></script>
+</head>
+
+<body>
+  <!-- Música de fondo -->
+  <audio id="musica" src="/boladragon/audio/Versosperversos.mp3" autoplay loop></audio>
+
+  <div class="battle-container">
+    <!-- Enemigo -->
+    <div class="enemy-area">
+      <div class="info-box">
+        <p id="nombre-jugador2">Jugador Enemigo (IA)</p>
+        <div class="health-bar-container">
+          <div id="hp2-bar" class="health-bar"></div>
+        </div>
+        <p>HP: <span id="hp2">100</span></p>
+      </div>
+      <img id="img-jugador2" alt="Jugador 2" class="sprite-back"/>
+    </div>
+
+    <!-- Jugador -->
+    <div class="player-area">
+      <img id="img-jugador1" alt="Jugador 1" class="sprite-front"/>
+      <div class="info-box">
+        <p id="nombre-jugador1">Tu Jugador</p>
+        <div class="health-bar-container">
+          <div id="hp1-bar" class="health-bar"></div>
+        </div>
+        <p>HP: <span id="hp1">100</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <div class="controls">
+    <button id="attack" onclick="playerAttack()">Atacar</button>
+    <button id="evade" onclick="playerEvade()">Esquivar</button>
+    <button id="heal" onclick="playerHeal()">Curar</button>
+    <button id="habilidadEspecial">Mostrar Habilidad Especial</button>
+  </div>
+
+  <!-- Registro de acciones -->
+  <div class="log" id="log"></div>
+
+  <!-- Pantalla de victoria -->
+  <div class="winner-screen" id="winnerScreen">
+    <h1 id="winnerText"></h1>
+    <button onclick="window.location.href='/boladragon/Menus/MenuPrueba3.html'">Volver al menú principal</button>
+  </div>
+
+  <!-- Script de combate -->
+  <script src="/boladragon/SCRIPT/combate.js"></script>
+</body>
+</html>

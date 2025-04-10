@@ -1,0 +1,21 @@
+body {
+    display: flex; /* Utiliza flexbox para alinear elementos hijos fácilmente */
+    justify-content: center; /* Centra horizontalmente el contenido hijo */
+    align-items: center; /* Centra verticalmente el contenido hijo */
+    
+    height: 800px; /* Altura fija del body (no ocupa el 100% de la pantalla) */
+    width: 1000px; /* Anchura fija del body */
+    
+    background: url('/boladragon/images/gatoriendose.gif') 
+                no-repeat 
+                center center / cover; 
+    /* Imagen de fondo centrada, sin repetición y ajustada para cubrir todo el contenedor */
+
+    background-size: 20%;
+
+
+    background-position: 50%;
+    /* Centra la imagen de fondo, aunque es redundante ya que ya está definido arriba como "center center" */
+
+    background-color: black; /* Color de fondo de respaldo en caso de que la imagen no cargue */
+}

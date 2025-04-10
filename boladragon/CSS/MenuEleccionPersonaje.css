@@ -1,0 +1,110 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    background: url('/boladragon/Escenarios/escenario_shitpost.webp') no-repeat center center/cover; /* Imagen de fondo centrada y cubriendo todo el área */
+    color: white; /* Color del texto en blanco */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    text-align: center; /* Alineación del texto al centro */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el padding predeterminado */
+    display: flex; /* Usamos Flexbox para organizar los elementos */
+    flex-direction: column; /* Coloca los elementos de forma vertical */
+    align-items: center; /* Centra los elementos de forma horizontal */
+    height: 100vh; /* Asegura que el body ocupe el 100% de la altura de la ventana */
+}
+
+/* Contenedor principal que engloba todo el contenido */
+.contenedor {
+    display: flex; /* Usamos Flexbox para organizar los elementos */
+    flex-direction: column; /* Elementos dispuestos de forma vertical */
+    align-items: center; /* Centra los elementos de forma horizontal */
+    width: 80%; /* El contenedor ocupa el 80% del ancho de la ventana */
+    margin-top: 20px; /* Añade un margen superior */
+}
+
+/* Estilo para el título principal (h1) */
+h1 {
+    font-size: 36px; /* Tamaño de la fuente para el título */
+    text-shadow: 2px 2px 5px black; /* Sombra de texto negra para mejorar la visibilidad sobre el fondo */
+}
+
+/* Contenedor para la selección de personajes */
+.seleccion {
+    display: flex; /* Usa Flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuye el espacio de forma equitativa entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin-top: 20px; /* Añade un margen superior */
+}
+
+/* Estilos comunes para las secciones de Jugador 1 y Jugador 2 */
+.jugador1, .jugador2 {
+    width: 30%; /* Cada sección ocupa el 30% del ancho disponible */
+    text-align: center; /* Centra el texto dentro de las secciones */
+    display: flex; /* Usa Flexbox dentro de cada sección */
+    flex-direction: column; /* Organiza los elementos de forma vertical */
+    align-items: center; /* Centra los elementos de forma horizontal */
+}
+
+/* Contenedor para la imagen del personaje seleccionado */
+.imagen-personaje {
+    width: 250px; /* Establece el ancho del contenedor de la imagen */
+    height: 400px; /* Establece la altura del contenedor de la imagen */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    border: 3px solid gold; /* Borde dorado para resaltar */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 10px; /* Espacio superior */
+    display: flex; /* Usa Flexbox dentro del contenedor */
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+}
+
+/* Estilos para las imágenes dentro del contenedor de la imagen */
+.imagen-personaje img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 100%; /* La imagen ocupará el 100% de la altura del contenedor */
+    object-fit: contain; /* Mantiene las proporciones originales de la imagen sin recortarla */
+}
+
+/* Estilos para el selector desplegable de personajes */
+select {
+    padding: 5px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar por encima */
+}
+
+/* Estilo para el texto "VS" entre los jugadores */
+.vs {
+    font-size: 50px; /* Tamaño grande de fuente */
+    font-weight: bold; /* Negrita */
+    color: red; /* Color rojo */
+    text-shadow: 2px 2px 5px black; /* Sombra de texto negra */
+}
+
+/* Estilos para el botón de combate */
+#botonCombate {
+    margin-top: 20px; /* Añade un margen superior */
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar por encima */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    transition: transform 0.2s, background-color 0.3s; /* Transiciones para el hover */
+}
+
+/* Estilo cuando el botón está deshabilitado */
+#botonCombate:disabled {
+    background-color: gray; /* Fondo gris cuando está deshabilitado */
+    cursor: not-allowed; /* Cursor no permitido */
+}
+
+/* Estilo cuando el botón está habilitado y se pasa el cursor por encima */
+#botonCombate:hover:enabled {
+    background-color: darkred; /* Cambia el fondo a un rojo oscuro */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón */
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Establece la codificación de caracteres a UTF-8 para soportar caracteres especiales -->
+    <meta charset="UTF-8">
+    
+    <!-- Hace que la página sea responsiva en dispositivos móviles ajustando el ancho a la pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <title>Opciones del Videojuego</title>
+    
+    <!-- Enlaza el archivo JavaScript que maneja la lógica de las opciones del juego. Se usa "defer" para cargar el script después de que el HTML esté completamente cargado -->
+    <script src="/boladragon/SCRIPT/opciones.js" defer></script>
+    
+    <!-- Enlaza el archivo CSS que contiene los estilos para la página de opciones -->
+    <link rel="stylesheet" href="/boladragon/CSS/Opciones.css">
+</head>
+<body>
+    <!-- Contenedor del menú de opciones -->
+    <div class="menu">
+        <!-- Botón que redirige al usuario al menú principal cuando se hace clic -->
+        <button class="back-button" onclick="window.location.href='/boladragon/Menus/Menuprueba3.html'">Menú Principal</button>
+
+        <!-- Título de la sección de opciones -->
+        <h2>Opciones del Juego</h2>
+        
+        <!-- Etiqueta para el control de volumen -->
+        <label for="volumen">Volumen</label>
+        
+        <!-- Control deslizante para ajustar el volumen, con un valor inicial de 50 -->
+        <input type="range" id="volumen" min="0" max="100" value="50">
+        
+    </div>
+</body>
+</html>

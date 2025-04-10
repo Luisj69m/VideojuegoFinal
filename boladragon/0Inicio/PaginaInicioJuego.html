@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- La declaración <!DOCTYPE html> define que el documento es una página HTML5. Esta declaración es importante 
+     porque indica al navegador que la página debe ser interpretada según las especificaciones de HTML5. -->
+
+<html lang="es">
+    <!-- La etiqueta <html> indica el inicio del documento HTML. El atributo lang="es" especifica que el idioma del contenido es español (es). -->
+    
+    <head>
+        <!-- La etiqueta <head> contiene metadatos sobre el documento, como el conjunto de caracteres, la vista de la página en dispositivos móviles, y enlaces a archivos externos. -->
+
+        <meta charset="UTF-8">
+        <!-- La etiqueta <meta> con el atributo charset="UTF-8" define la codificación de caracteres para el documento. UTF-8 es una codificación estándar que admite caracteres especiales (acentos, símbolos, etc.). -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- La etiqueta <meta> con el atributo name="viewport" es esencial para la adaptabilidad en dispositivos móviles. 
+             Establece el ancho de la vista (viewport) al tamaño del dispositivo y la escala inicial de la página a 1.0. 
+             Esto asegura que la página se vea correctamente en dispositivos con diferentes tamaños de pantalla. -->
+
+        <title>Página de Inicio</title>
+        <!-- La etiqueta <title> establece el título de la página. Este título aparecerá en la pestaña del navegador y en los resultados de búsqueda. -->
+
+        <link rel="stylesheet" href="/boladragon/CSS/PaginaInicio.css">
+        <!-- La etiqueta <link> se utiliza para enlazar un archivo externo. En este caso, está enlazando un archivo CSS llamado "PaginaInicio.css" ubicado en la carpeta "/boladragon/CSS". 
+             Este archivo CSS contiene los estilos visuales para la página. -->
+    </head>
+
+    <body onclick="window.location.href='/boladragon/Menus/MenuPrueba3.html'">
+        <!-- La etiqueta <body> contiene el contenido visible de la página web. El atributo onclick en la etiqueta <body> asigna una acción que se ejecuta al hacer clic en cualquier parte del cuerpo de la página. 
+             En este caso, la acción consiste en redirigir al usuario a la URL "/boladragon/Menus/MenuPrueba3.html", es decir, a la página "MenuPrueba3.html". 
+             Esta acción ocurre cuando se hace clic en cualquier parte del cuerpo de la página. -->
+
+        <div class="inicio-contenido">
+            <!-- La etiqueta <div> es un contenedor que agrupa otros elementos. En este caso, agrupa el título y el párrafo dentro de una sección con la clase CSS "inicio-contenido". -->
+        
+            <h1>Haz clic en cualquier parte para entrar al juego</h1>
+            <!-- La etiqueta <h1> es un encabezado de nivel 1 que contiene el texto principal "Haz clic en cualquier parte para entrar al juego". 
+          

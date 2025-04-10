@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma del contenido en español -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres para admitir acentos y símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escalado adecuado para móviles -->
+    <title>Selección de Personajes</title> <!-- Título que se muestra en la pestaña del navegador -->
+
+    <!-- Enlace a la hoja de estilos principal -->
+    <link rel="stylesheet" href="/boladragon/CSS/MenuEleccionPersonaje.css">
+
+    <!-- Este link es incorrecto: "src" no es válido para link, debería ser "href" -->
+    <!-- link src="/boladragon/menupersonajestyle.css" -->
+    
+    <!-- Botón para volver al menú principal, incorrectamente colocado dentro del <head> (debe ir en <body>) -->
+    <button
+        class="back-button"
+        onclick="window.location.href='/boladragon/Menus/Menuprueba3.html'">← Menú Principal</button>
+
+    <!-- Scripts JavaScript para la lógica de la selección y opciones -->
+    <script src="/boladragon/SCRIPT/eleccionpersonaje.js"></script>
+    <script src="/boladragon/SCRIPT/opciones.js" defer></script> <!-- Defer para que cargue al final -->
+</head>
+
+<body>
+    <!-- Música de fondo que se reproduce en bucle automáticamente -->
+    <audio id="musica" src="/boladragon/audio/Majinbu.mp3" autoplay loop></audio>
+
+    <!-- Contenedor principal -->
+    <div class="contenedor">
+        <h1>Selección de Personajes</h1>
+
+        <!-- Contenedor para los dos jugadores -->
+        <div class="seleccion">
+
+            <!-- Jugador 1 (usuario) -->
+            <div class="jugador1">
+                <h2 id="nombre-jugador1">Tu jugador</h2>
+                <select id="jugador1" onchange="seleccionarPersonaje('jugador1')">
+                    <option value="">Seleccionar</option>
+                    <option value="Cj_eleccion">Cj</option>
+                    <option value="Diddy_eleccion">Diddy</option>
+                    <option value="churumbel_eleccion">Churumbel</option>
+                    <option value="among_eleccion">Among Us</option>
+                    <option value="Walter_eleccion">Walter el Blanco</option>
+                    <option value="Franco_eleccion">Franco</option>
+                </select>
+                <div class="imagen-personaje" id="imagen-jugador1"></div> <!-- Aquí se carga la imagen del personaje seleccionado -->
+            </div>
+
+            <!-- Texto "VS" entre los jugadores -->
+            <div class="vs">VS</div>
+
+            <!-- Jugador 2 (IA enemiga) -->
+            <div class="jugador2">
+                <h2 id="nombre-jugador2">Jugador Enemigo (IA)</h2>
+                <select id="jugador2" onchange="seleccionarPersonaje('jugador2')">
+                    <option value="">Seleccionar</option>
+                    <option value="Cj_eleccion">Cj</option>
+                    <option value="Diddy_eleccion">Diddy</option>
+                    <option value="churumbel_eleccion">Churumbel</option>
+                    <option value="among_eleccion">Among Us</option>
+                    <option value="Walter_eleccion">Walter el Blanco</option>
+                    <option value="Franco_eleccion">Franco</option>
+                </select>
+                <div class="imagen-personaje" id="imagen-jugador2"></div> <!-- Imagen del enemigo -->
+            </div>
+        </div>
+
+        <!-- Botón para comenzar el combate, desactivado hasta que se elijan ambos personajes -->
+        <button id="botonCombate" onclick="iniciarCombate()" disabled>Comenzar Combate</button>
+    </div>
+
+    <!-- Script duplicado, ya fue cargado arriba -->
+    <script src="/boladragon/SCRIPT/eleccionpersonaje.js"></script>
+</body>
+</html>

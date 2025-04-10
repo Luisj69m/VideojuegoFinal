@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma definido como español -->
+  <head>
+    <meta charset="UTF-8" /> <!-- Codificación para admitir caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Adaptación responsive a dispositivos -->
+    <title>Tienda de Combate</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Hoja de estilos personalizada para la tienda -->
+    <link rel="stylesheet" href="/boladragon/CSS/EstiloTienda.css" />
+
+    <!-- Script principal de la tienda. 'defer' garantiza que se cargue después del HTML -->
+    <script defer src="/boladragon/SCRIPT/tiendaprueba.js"></script>
+
+    <!-- Script adicional con opciones generales, también diferido -->
+    <script src="/boladragon/SCRIPT/opciones.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Reproductor de música de fondo con autoplay y loop -->
+    <audio id="musica" src="/boladragon/audio/Zelda.mp3" autoplay loop></audio>
+
+    <!-- Botón para volver al menú principal -->
+    <button class="back-button" onclick="window.location.href='/boladragon/Menus/Menuprueba3.html'">
+      ← Menú Principal
+    </button>
+
+    <!-- Contenedor principal de la tienda -->
+    <div class="container">
+      <h1>Tienda de Habilidades</h1>
+
+      <!-- Sección donde se muestran monedas, barra de experiencia y progreso de nivel -->
+      <div class="stats-box">
+        <p>💰 Monedas: <span id="coins">0</span></p> <!-- Contador de monedas -->
+
+        <!-- Barra de experiencia (relleno visual con CSS y JS) -->
+        <div class="barra-exp-container">
+          <div id="barra-exp" class="barra-exp"></div>
+        </div>
+
+        <!-- Texto que muestra la experiencia actual y el máximo del nivel -->
+        <p id="exp-texto">Experiencia: <span id="exp">0</span> / 100</p>
+      </div>
+
+      <!-- Contenedor dinámico: aquí se generan los objetos/ítems disponibles en la tienda -->
+      <div class="shop" id="shop"></div>
+
+      <!-- Inventario del jugador: lista con los ítems comprados -->
+      <h2>Inventario</h2>
+      <ul id="inventory"></ul>
+    </div>
+  </body>
+</html>
