@@ -1,0 +1,38 @@
+/* Estilos generales para el body */
+body {
+  display: flex; /* Utiliza Flexbox para alinear los elementos dentro del body */
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center; /* Centra los elementos de forma horizontal */
+  justify-content: center; /* Centra los elementos de forma vertical */
+  min-height: 100vh; /* Establece la altura mínima del body al 100% de la ventana */
+  text-align: center; /* Centra el texto dentro del body */
+  gap: 1rem; /* Añade un espacio de 1rem entre los elementos hijos */
+  background-color: black; /* Establece el fondo de la página en color negro */
+  color: white; /* Establece el color del texto a blanco */
+}
+
+/* Estilos para el contenedor de la clase 'inicio-contenido' */
+.inicio-contenido {
+  display: flex; /* Utiliza Flexbox para organizar los elementos dentro de este contenedor */
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center; /* Centra los elementos de forma horizontal */
+  justify-content: center; /* Centra los elementos de forma vertical */
+  min-height: 100vh; /* Establece la altura mínima del contenedor al 100% de la ventana */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  gap: 1rem; /* Añade un espacio de 1rem entre los elementos dentro del contenedor */
+}
+
+/* Estilos para los elementos que tienen la clase 'animado' */
+.animado {
+  opacity: 0; /* Inicialmente, el elemento es completamente transparente */
+  transform: translateY(20px); /* El elemento está desplazado 20px hacia abajo */
+  animation: fadeInUp 1s ease-out 0.5s forwards; /* Aplica la animación 'fadeInUp' con un retraso de 0.5s */
+}
+
+/* Definición de la animación 'fadeInUp' */
+@keyframes fadeInUp {
+  to {
+      opacity: 1; /* Hace que el elemento se vuelva completamente visible */
+      transform: translateY(0); /* Restablece el desplazamiento vertical del elemento */
+  }
+}
